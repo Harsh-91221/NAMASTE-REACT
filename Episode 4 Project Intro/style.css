@@ -5,6 +5,7 @@
 }
 
 .logo {
+  cursor: pointer;
   height: 150px;
 }
 
