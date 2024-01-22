@@ -12,8 +12,23 @@
   list-style-type: none;
 }
 .nav-items ul li {
-  padding: 10px;
+  cursor: pointer;
+  padding: 0 10px;
   margin: 10px;
+  position: relative;
+}
+.nav-items ul li::after {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: width 0.3s; 
+}
+.nav-items ul li:hover::after {
+  width: 100%;
 }
 .res-container {
   display: flex;
