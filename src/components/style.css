@@ -79,3 +79,9 @@
   height: 400px;
   background-color: #f0f0f0;
 }
+.Login{
+  cursor: pointer;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+}
