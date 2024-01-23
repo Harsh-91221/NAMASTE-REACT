@@ -1,4 +1,3 @@
-import { useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import resObj from "../utils/mockData";
 import { useState } from "react";
