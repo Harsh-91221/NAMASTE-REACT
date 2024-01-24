@@ -85,3 +85,6 @@
   padding: 10px;
   text-align: center;
 }
+.filter{
+  display: flex;
+}
