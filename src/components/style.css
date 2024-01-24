@@ -21,7 +21,7 @@
   margin: 10px;
   position: relative;
 }
-.login{
+.login {
   padding: 0 20px;
   cursor: pointer;
 }
@@ -79,12 +79,12 @@
   height: 400px;
   background-color: #f0f0f0;
 }
-.Login{
+.Login {
   cursor: pointer;
   margin: 5px;
   padding: 10px;
   text-align: center;
 }
-.filter{
+.filter {
   display: flex;
 }
