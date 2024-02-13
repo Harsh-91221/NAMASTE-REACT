@@ -1,7 +1,6 @@
 import { useState } from "react";
 import food from "../images/food-png.png"
 const About = () => {
-  const [show, setShow] = useState(false);
   return (
     <div className="min-h-screen">
       <div className="mx-auto mt-20 text-center"></div>
