@@ -6,6 +6,7 @@ const Contact = () => {
         e.preventDefault();
         setMessage(true);
     }
+
     return (
         <div className="contact-container flex flex-row flex-wrap justify-evenly items-center mx-auto mt-60 mb-20 overflow-y-hidden h-3/4">
             <div className="contact-left flex justify-center items-center">
