@@ -1,4 +1,3 @@
-import { useState } from "react";
 import food from "../images/food-png.png"
 const About = () => {
   return (
