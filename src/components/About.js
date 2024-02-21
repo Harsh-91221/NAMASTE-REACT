@@ -7,7 +7,7 @@ const About = () => {
         <div className="about-left flex flex-wrap flex-col justify-start items-start overflow-y-hidden">
           <h1 className="text-7xl text-light-text-color">
             Step into <br /> Flavorful Fields of <br />
-            <span className="inline-block bg-orange-500 px-4 py-1 rounded-lg text-light-white-text">Culinary Delight</span>
+            <span className="inline-block bg-orange-500 px-4 py-3 rounded-lg text-light-white-text">Culinary Delight</span>
           </h1>
           <h4 className="text-lg mt-4 italic text-light-text-color">
             "Where Every Bite Tells a Story"
