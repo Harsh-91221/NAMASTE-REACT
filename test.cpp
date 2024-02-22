@@ -1,33 +1,26 @@
 class Solution
 {
 public:
-    int solve(string s, int k, int start, int end)
+    long long solve(vector<int> &nums, int i, int n, vector<int> &dp)
     {
-        if (end - start < k)
+        if (i >= n)
         {
             return 0;
         }
-        vector<int> count(26);
-        for (int i = start; i < end; i++)
+        if (dp[i] != -1)
         {
-            count[s[i] - 'a']++;
+            return dp[i];
         }
-        for (int i = start; i < end; i++)
+        long long mini = INT_MAX;
+        for (int j = 1; j <= nums[i]; j++)
         {
-            if (count[s[i] - 'a'] < k)
-            {
-                int j = i + 1;
-                while (j < end && count[s[j] - 'a'] < k)
-                {
-                    j++;
-                }
-                return max(solve(s, k, start, i), solve(s, k, j, end));
-            }
+            mini = min(mini, 1 + solve(nums, i + j, n, dp));
         }
-        return end - start;
+        return dp[i] = mini;
     }
-    int longestSubstring(string s, int k)
+    int jump(vector<int> &nums)
     {
-        return solve(s, k, 0, s.length());
+        vector<int> dp(nums.size(), -1);
+        return solve(nums, 0, nums.size() - 1, dp);
     }
 };
