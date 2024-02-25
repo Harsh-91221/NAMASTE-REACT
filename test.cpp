@@ -1,26 +1,37 @@
 class Solution
 {
 public:
-    long long solve(vector<int> &nums, int i, int n, vector<int> &dp)
+    long long largestSquareArea(vector<vector<int>> &bottomLeft, vector<vector<int>> &topRight)
     {
-        if (i >= n)
+        long long max_area = 0;
+        int n = bottomLeft.size();
+
+        for (int i = 0; i < n; i++)
         {
-            return 0;
+            for (int j = i + 1; j < n; j++)
+            {
+                int minX = max(bottomLeft[i][0], bottomLeft[j][0]);
+                int minY = max(bottomLeft[i][1], bottomLeft[j][1]);
+            }
+            if (minX < maxX && minY < maxY)
+            {
+                long long part = min(maxX - minX, maxY - minY);
+                maxArea = max(maxArea, part * part);
+            }
         }
-        if (dp[i] != -1)
+        for (int i = 0; i < n; i++)
         {
-            return dp[i];
+            for (int j = i + 1; j < n; j++)
+            {
+                int maxX = min(topRight[i][0], topRight[j][0]);
+                int maxY = min(topRight[i][1], topRight[j][1]);
+            }
+            if (minX < maxX && minY < maxY)
+            {
+                long long part = min(maxX - minX, maxY - minY);
+                maxArea = max(maxArea, part * part);
+            }
         }
-        long long mini = INT_MAX;
-        for (int j = 1; j <= nums[i]; j++)
-        {
-            mini = min(mini, 1 + solve(nums, i + j, n, dp));
-        }
-        return dp[i] = mini;
-    }
-    int jump(vector<int> &nums)
-    {
-        vector<int> dp(nums.size(), -1);
-        return solve(nums, 0, nums.size() - 1, dp);
+        return max_area;
     }
 };
